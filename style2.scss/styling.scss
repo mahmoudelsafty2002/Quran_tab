@@ -1,0 +1,108 @@
+:root {
+  --color-soft-blue: #5368df;
+  --color-soft-red: #fa5757;
+  --color-grayish-blue: #9194a1;
+  --color-very-dark-blue: #252b46;
+  --color-off-white: #f7f7f7;
+  --default-padding: 2rem;
+  --default-radius: 0.4rem;
+  --desktop-width: 900px;
+  --tablet-width: 600px;
+  --timing-animation: 0.2s;
+}
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  display: inline-block;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Rubik", sans-serif;
+  color: var(--color-white);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* End CSS Reset */
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: var(--desktop-width);
+  margin: 0 auto;
+  padding: 0 var(--default-padding);
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--default-padding);
+}
+.LogoContent {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  &__logo {
+    max-width: 100%0;
+    width: 4rem;
+  }
+}
+
+.links {
+  display: flex;
+  gap: var(--default-padding);
+  align-items: center;
+  &__link {
+    color: var(--color-very-dark-blue);
+  }
+  &__link:hover {
+    color: var(--color-soft-red);
+    transition: var(--timing-animation) ease-in-out;
+  }
+}
+.section {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--default-padding) * 2);
+
+  &:nth-child(1)&__title {
+    font-size: 2.2rem;
+  }
+  &__image {
+    max-width: 100%;
+  }
+}
